@@ -17,16 +17,14 @@
     <div id="app">
         <div class="container">
             <div class="card">
-                <img width="700" src="./assets/img/01.jpg" alt="">
+                
+                <img :src="place[activeImage].image" alt="">
+                <div class="thumbnails">
+                    <img :src="thumb" class="thumb" v-for="(thumb, index) in place.image">
+                </div>
             </div>
-            <div class="card slider">
-                <img width="150" height="79" src="./assets/img/01.jpg" alt="">
-                <img width="150" height="79" src="./assets/img/02.jpg" alt="">
-                <img width="150" height="79" src="./assets/img/03.jpg" alt="">
-                <img width="150" height="79" src="./assets/img/04.jpg" alt="">
-                <img width="150" height="77" src="./assets/img/05.jpg" alt="">
-            </div>
-        </div>
+            
+        </div> 
     </div>
 
 

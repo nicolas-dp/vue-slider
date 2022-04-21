@@ -11,17 +11,20 @@
     justify-content: center;
 }
 
-.card>img{
-    max-width: 100%;
-    object-fit: cover;
+.card img{
+    width: 100%;
+    
 }
 
-.slider{
+.thumbnails{
     display: flex;
     flex-direction: column;
+}
+
+.thumbnails .thumb{
     height: calc(100% / 5);
 }
 
-.slider>img{
+/* .thumbnails>img{
     opacity: 1;
-}
+} */
