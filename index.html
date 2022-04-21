@@ -17,13 +17,22 @@
     <div id="app">
         <div class="container">
             <div class="card">
-                
+                <!-- Puntiamo l'immagine nell'array in posizione da 0 a fino alla fine degli oggetti -->
                 <img :src="place[activeImage].image" alt="">
-                <div class="thumbnails">
-                    <img :src="thumb" class="thumb" v-for="(thumb, index) in place.image">
+                <div class="text_img">
+                    <h3>{{place[activeImage].title}}</h3>
+                    <p>{{place[activeImage].text}}</p>
                 </div>
             </div>
-            
+            <div class="thumbnails">
+                <img :src="thumb.image" class="thumb" v-for="(thumb, index) in place">
+                
+            </div>
+
+            <div class="navigator">
+                <div class="prev" @click="prevImage"><i class="fa-solid fa-circle-chevron-up"></i></div>
+                <div class="next" @click="nextImage"><i class="fa-solid fa-circle-chevron-down"></i></div>
+            </div>
         </div> 
     </div>
 

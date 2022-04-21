@@ -18,8 +18,8 @@ const app = new Vue({
     data: {
         activeImage: 0,
 
-        place: 
-             [
+        place:
+            [
                 {
                     image: './assets/img/01.jpg',
                     title: 'Svezia',
@@ -45,9 +45,30 @@ const app = new Vue({
                     title: 'Paradise',
                     text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
                 }
-                
+
             ]
-         
+
+    },
+
+    methods: {
+
+        prevImage() {
+            if (this.activeImage === 0) {
+                this.activeImage = this.place.length;
+            }
+            this.activeImage--
+        },
+
+        nextImage() {
+
+            this.activeImage++
+            if (this.activeImage === this.place.length) {
+                this.activeImage = 0;
+            }
+        }
+
+
+
     }
-    
+
 })

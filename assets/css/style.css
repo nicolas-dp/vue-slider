@@ -11,20 +11,51 @@
     justify-content: center;
 }
 
-.card img{
-    width: 100%;
-    
+.card{
+    position: relative;
 }
+
+.card img{
+    max-width: 100%;
+    object-fit: contain;
+}
+
+
 
 .thumbnails{
     display: flex;
     flex-direction: column;
 }
 
-.thumbnails .thumb{
-    height: calc(100% / 5);
+.thumbnails>.thumb{
+    width: calc(100% / 5);
 }
 
-/* .thumbnails>img{
-    opacity: 1;
-} */
+.thumbnails>img{
+    filter: brightness(0.6);
+} 
+
+
+.text_img{
+    width: 50%;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 5rem;
+    right: 0;
+    
+}
+
+
+.prev{
+    position: absolute;
+    left: 49rem;
+    top: 2.3rem;
+    filter: invert(1)
+}
+
+.next{
+    position: absolute;
+    left: 49.2rem;
+    top: 17.8rem;
+    filter: invert(1)
+}
