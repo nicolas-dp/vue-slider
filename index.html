@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="thumbnails">
-                <img :src="thumb.image" :class="activeImage === index ? 'active' : '' " class="thumb" v-for="(thumb, index) in place">
+                <img :src="thumb.image" :class="activeImage === index ? 'active' : '' " class="thumb" v-for="(thumb, index) in place" @click="thisImage">
                 
             </div>
 

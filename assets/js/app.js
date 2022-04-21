@@ -65,6 +65,11 @@ const app = new Vue({
             if (this.activeImage === this.place.length) {
                 this.activeImage = 0;
             }
+        },
+
+        thisImage() {
+
+            this.activeImage
         }
 
 
