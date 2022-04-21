@@ -15,7 +15,7 @@
     position: relative;
 }
 
-.card img{
+img{
     max-width: 100%;
     object-fit: contain;
 }
@@ -32,7 +32,7 @@
 }
 
 .thumbnails>img{
-    filter: brightness(0.6);
+    filter: brightness(0.3);
 } 
 
 
@@ -58,4 +58,9 @@
     left: 49.2rem;
     top: 17.8rem;
     filter: invert(1)
+}
+
+.active{
+    filter: brightness(1)!important;
+    border: 2px solid blue;
 }
