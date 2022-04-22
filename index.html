@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="thumbnails">
-                <img :src="thumb.image" :class="activeImage === index ? 'active' : '' " class="thumb" v-for="(thumb, index) in place" > 
+                <img :src="thumb.image" :class="activeImage === index ? 'active' : '' " class="thumb" v-for="(thumb, index) in place" @click="changeImage(index)"> 
                 <div class="navigator">
                     <div class="prev" @click="prevImage"><i class="fa-solid fa-circle-chevron-up"></i></div>
                     <div class="next" @click="nextImage"><i class="fa-solid fa-circle-chevron-down"></i></div>
