@@ -16,7 +16,7 @@
 <body>
     <div id="app">
         <div class="container">
-            <div class="card">
+            <div class="card" @mouseover="pauseSlider" @mouseout="startSlider">
                 <!-- Puntiamo l'immagine nell'array in posizione da 0 a fino alla fine degli oggetti -->
                 <img :src="place[activeImage].image" alt="" height="275">
                 <div class="text_img">

@@ -17,7 +17,7 @@ const app = new Vue({
 
     data: {
         activeImage: 0,
-
+        sliderTimerId: null,
         place:
             [
                 {
@@ -69,7 +69,20 @@ const app = new Vue({
 
         changeImage(index){
             this.activeImage = index
+        },
+
+        pauseSlider(){
+            clearInterval(this.sliderTimerId)
+        },
+
+        startSlider(){
+            this.sliderTimerId = setInterval(this.nextImage, 3000)
         }
+    },
+
+    mounted(){
+        //console.log("mounted");
+        this.sliderTimerId = setInterval(this.nextImage, 3000)
     }
 
 })
